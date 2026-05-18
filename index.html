@@ -291,9 +291,7 @@
         </div>
       </div>
 
-      <!-- Nächstes Spiel: 17. Mai -->
-      <div class="next-lbl" id="next-lbl">NÄCHSTES SPIEL</div>
-      <div class="game-card next" data-type="away">
+      <div class="game-card" data-type="away">
         <div class="date-col"><div class="day">17</div><div class="mon">MAI</div><div class="dow">So.</div></div>
         <div class="matchup">
           <div class="team"><div class="team-name">MULHOUSE</div></div>
@@ -302,12 +300,14 @@
         </div>
         <div class="info-col">
           <div><span class="badge b-away">Auswärts</span></div>
-          <div class="game-time">13:00 Uhr</div>
+          <div class="game-time">gespielt ✓</div>
           <div class="game-venue">Rheinwaldstadion<br>Neuenburg am Rhein</div>
         </div>
       </div>
 
-      <div class="game-card" data-type="home">
+      <!-- Nächstes Spiel: 30. Mai -->
+      <div class="next-lbl" id="next-lbl">NÄCHSTES SPIEL</div>
+      <div class="game-card next" data-type="home">
         <div class="date-col"><div class="day">30</div><div class="mon">MAI</div><div class="dow">Sa.</div></div>
         <div class="matchup">
           <div class="team"><div class="team-name">KNIGHTS</div></div>
@@ -417,7 +417,7 @@
         <p>LANDESLIGA BASEBALL</p>
       </div>
       <div class="record-display">
-        <div class="rec-item"><div class="rv" id="wins">3</div><div class="rl">SIEGE</div></div>
+        <div class="rec-item"><div class="rv" id="wins">4</div><div class="rl">SIEGE</div></div>
         <div class="rec-sep">·</div>
         <div class="rec-item"><div class="rv" id="losses">1</div><div class="rl">NIEDERLAGEN</div></div>
       </div>
@@ -461,7 +461,6 @@
       </div>
     </div>
 
-    <!-- Ravensburg Pokal – Niederlage 2:3 -->
     <div class="result-card loss">
       <div class="result-date"><div class="day">14</div><div class="mon">MAI</div></div>
       <div class="result-matchup">
@@ -474,13 +473,20 @@
       </div>
     </div>
 
-    <div class="section-title" style="margin-top:28px;">AUSSTEHENDE SPIELE</div>
-
-    <div class="result-card pending">
+    <!-- Mulhouse – Sieg 10:6 -->
+    <div class="result-card win">
       <div class="result-date"><div class="day">17</div><div class="mon">MAI</div></div>
-      <div class="result-matchup"><div class="result-teams">Mulhouse vs. Knights</div><div class="result-meta">Auswärts · Neuenburg am Rhein</div></div>
-      <div class="result-score-col"><div class="score-display pending">– : –</div><div><span class="result-badge rb-pending">Ausstehend</span></div></div>
+      <div class="result-matchup">
+        <div class="result-teams">Mulhouse vs. Knights</div>
+        <div class="result-meta">Auswärts · Neuenburg am Rhein</div>
+      </div>
+      <div class="result-score-col">
+        <div class="score-display win">10 : 6</div>
+        <div><span class="result-badge rb-win">Sieg</span></div>
+      </div>
     </div>
+
+    <div class="section-title" style="margin-top:28px;">AUSSTEHENDE SPIELE</div>
 
     <div class="result-card pending">
       <div class="result-date"><div class="day">30</div><div class="mon">MAI</div></div>
@@ -543,10 +549,10 @@
       card.style.display = (type === 'all' || card.dataset.type === type) ? 'flex' : 'none';
     });
     const lbl = document.getElementById('next-lbl');
-    if (lbl) lbl.style.display = (type === 'all' || type === 'away') ? 'block' : 'none';
+    if (lbl) lbl.style.display = (type === 'all' || type === 'home') ? 'block' : 'none';
   }
 
-  document.getElementById('wins').textContent = 3;
+  document.getElementById('wins').textContent = 4;
   document.getElementById('losses').textContent = 1;
 </script>
 
